@@ -1,0 +1,61 @@
+{
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/gmail.addons.current.message.metadata",
+    "https://www.googleapis.com/auth/gmail.modify",
+    "https://www.googleapis.com/auth/gmail.addons.current.action.compose",
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/forms.currentonly",
+    "https://www.googleapis.com/auth/forms",
+    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/userinfo.email",
+    "https://www.googleapis.com/auth/script.storage",
+    "https://www.googleapis.com/auth/script.send_mail",
+    "https://www.googleapis.com/auth/documents",
+    "https://sites.google.com/feeds",
+    "https://www.googleapis.com/auth/gmail.insert",
+    "https://mail.google.com/"
+    
+  ],
+  "gmail": {
+    "name": "Compose Mail Add-ons",
+    "logoUrl": "https://www.gstatic.com/images/icons/material/system/2x/bookmark_black_24dp.png",
+    "contextualTriggers": [{
+      "unconditional": {
+      },
+      "onTriggerFunction": "redirect"
+    }],
+     "composeTrigger": {
+      "selectActions": [
+        {
+          "text": "Add images to email",
+          "runFunction": "redirect"
+        }
+      ],
+      "draftAccess": "METADATA"
+    },
+
+    "openLinkUrlPrefixes": [
+      "https://mail.google.com/",
+      "https://www.google.com",
+      "https://www.youtube.com/",
+      "https://www.wdipl.com",
+      "http://localhost/sandeep/gmail_addon/"
+    ],
+ "universalActions": [{
+        "text": "Open google.com",
+        "openLink": "https://www.google.com"
+      }, {
+        "text": "YouTube",
+        "runFunction": "notificationCallback1"
+      }, {
+        "text": "Wdipl",
+        "runFunction": "notificationCallback2"
+      }, {
+        "text": "Gmail",
+        "runFunction": "notificationCallback3"
+    }],
+    "primaryColor": "#4285F4",
+    "secondaryColor": "#4285F4"
+  }
+}
